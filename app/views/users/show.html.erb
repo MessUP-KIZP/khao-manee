@@ -1,0 +1,4 @@
+<div className="users-show">
+  <h1>User: <%= @current_user.email %></h1>
+   <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+</div>
