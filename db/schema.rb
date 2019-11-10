@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(version: 2019_11_10_204835) do
   create_table "organisations_users", id: false, force: :cascade do |t|
     t.bigint "organisation_id", null: false
     t.bigint "user_id", null: false
-    t.integer "type"
+    t.integer "relation_type"
     t.index ["organisation_id"], name: "index_organisations_users_on_organisation_id"
     t.index ["user_id"], name: "index_organisations_users_on_user_id"
   end
@@ -78,7 +78,7 @@ ActiveRecord::Schema.define(version: 2019_11_10_204835) do
   end
 
   create_table "roles", force: :cascade do |t|
-    t.integer "type"
+    t.integer "role_type"
   end
 
   create_table "roles_users", id: false, force: :cascade do |t|
@@ -88,7 +88,7 @@ ActiveRecord::Schema.define(version: 2019_11_10_204835) do
 
   create_table "tags", force: :cascade do |t|
     t.string "name"
-    t.integer "type"
+    t.integer "tag_type"
   end
 
   create_table "tags_users", id: false, force: :cascade do |t|

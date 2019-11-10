@@ -15,7 +15,7 @@ class CreateManyManyTables < ActiveRecord::Migration[5.2]
 
     create_table :tags do |t|
       t.string :name
-      t.integer :type
+      t.integer :tag_type
     end
 
     create_table :biographies do |t|
@@ -24,7 +24,7 @@ class CreateManyManyTables < ActiveRecord::Migration[5.2]
     end
 
     create_table :roles do |t|
-      t.integer :type
+      t.integer :role_type
     end
 
     create_table :projects do |t|
@@ -52,7 +52,7 @@ class CreateManyManyTables < ActiveRecord::Migration[5.2]
     create_join_table :organisations, :users do |t|
       t.index :organisation_id
       t.index :user_id
-      t.integer :type
+      t.integer :relation_type
     end
   end
 end
