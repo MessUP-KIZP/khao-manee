@@ -10,10 +10,91 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_10_200754) do
+ActiveRecord::Schema.define(version: 2019_11_10_204835) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "biographies", force: :cascade do |t|
+    t.text "description"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_biographies_on_user_id"
+  end
+
+  create_table "feedback", force: :cascade do |t|
+    t.integer "score"
+    t.text "description"
+    t.bigint "project_id"
+    t.bigint "user_id_id"
+    t.integer "from"
+    t.index ["project_id"], name: "index_feedback_on_project_id"
+    t.index ["user_id_id"], name: "index_feedback_on_user_id_id"
+  end
+
+  create_table "organisation_contacts", force: :cascade do |t|
+    t.string "country"
+    t.string "city"
+    t.string "city_code"
+    t.string "street"
+    t.bigint "organisation_id"
+    t.index ["organisation_id"], name: "index_organisation_contacts_on_organisation_id"
+  end
+
+  create_table "organisations", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "website"
+  end
+
+  create_table "organisations_tags", id: false, force: :cascade do |t|
+    t.bigint "organisation_id", null: false
+    t.bigint "tag_id", null: false
+  end
+
+  create_table "organisations_users", id: false, force: :cascade do |t|
+    t.bigint "organisation_id", null: false
+    t.bigint "user_id", null: false
+    t.integer "type"
+    t.index ["organisation_id"], name: "index_organisations_users_on_organisation_id"
+    t.index ["user_id"], name: "index_organisations_users_on_user_id"
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.integer "status"
+    t.string "name"
+    t.text "description"
+    t.integer "score"
+    t.bigint "organisation_id"
+    t.index ["organisation_id"], name: "index_projects_on_organisation_id"
+  end
+
+  create_table "projects_tags", id: false, force: :cascade do |t|
+    t.bigint "project_id", null: false
+    t.bigint "tag_id", null: false
+  end
+
+  create_table "projects_users", id: false, force: :cascade do |t|
+    t.bigint "project_id", null: false
+    t.bigint "user_id", null: false
+  end
+
+  create_table "roles", force: :cascade do |t|
+    t.integer "type"
+  end
+
+  create_table "roles_users", id: false, force: :cascade do |t|
+    t.bigint "role_id", null: false
+    t.bigint "user_id", null: false
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string "name"
+    t.integer "type"
+  end
+
+  create_table "tags_users", id: false, force: :cascade do |t|
+    t.bigint "tag_id", null: false
+    t.bigint "user_id", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "first_name"
