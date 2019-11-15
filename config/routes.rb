@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root to: "home#index"
 
   resources :users, only: [:show] do
     resources :tags_users, only: [:index, :create, :destroy]
   end
+
+  get '*page', to: 'home#index', constraints: ->(req) { !req.xhr? && req.format.html? }
+
+  root to: "home#index"
 end
