@@ -1,17 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import routes from '../lib/routes';
+import routes from 'routes';
 import { Provider } from 'react-redux';
-import configureStore from './configureStore';
-import HelloWorld from './HelloWorld';
+import configureStore from 'configureStore';
+import HelloWorld from './HelloWorld.component';
 
 const store = configureStore();
 
 class App extends React.Component {
   render () {
     return (
-
       <Provider store={ store }>
         <BrowserRouter>
           <Switch>
