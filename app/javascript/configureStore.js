@@ -1,13 +1,6 @@
 import { createStore } from 'redux';
-
-const initialState = {};
-
-const rootReducer = (state, action) => {
-  switch (action.type) {
-    default:
-      return state;
-  }
-}
+import rootReducer from 'reducers';
+import initialState from 'reducers/initialState';
 
 const configureStore = () => createStore(rootReducer, initialState);
 
