@@ -35,6 +35,7 @@ class HelloWorld extends React.Component {
         <form onSubmit={ this.onSubmit }>
           <label htmlFor="greeting-input">Identify yourself </label>
           <input type="text" id="greeting-input" onChange={ this.onChange } />
+          <button type="submit">Submit name</button>
         </form>
         <p>Greeting: { text }</p>
       </React.Fragment>

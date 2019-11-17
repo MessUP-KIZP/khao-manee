@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
 import helloWorld from 'reducers/helloWorld';
-import { routerReducer as router } from 'react-router-redux';
+import { connectRouter } from 'connected-react-router'
 
-export default combineReducers({
-  router,
+export default (history) => combineReducers({
+  router: connectRouter(history),
   helloWorld,
 });
