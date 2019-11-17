@@ -1,10 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import routes from 'routes';
 import { Provider } from 'react-redux';
 import configureStore from 'configureStore';
-import HelloWorld from './HelloWorld.component';
+import HelloWorld from 'components/helloWorld';
 
 const store = configureStore();
 
