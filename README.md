@@ -1,24 +1,30 @@
-# README
+# do it good
+## project setup (osx)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ - install [ruby](https://www.ruby-lang.org/en/documentation/installation/)
+   - currently we are using ruby `2.6.0`
+ - install bundler -> `gem install bundler`
+ - install [rvm](https://rvm.io/) or other ruby version manager (ie. [rbenv](https://rvm.io/))
+ - install [direnv](https://direnv.net/)
+ - install [Ruby on Rails 5.2.3](https://gorails.com/setup/ubuntu/19.10)
+ - install [node.js](https://nodejs.org/en/download/)
+ - install [yarn](https://yarnpkg.com/lang/en/docs/install/#mac-stable)
+ - clone the project
+ - `bundle install`
+ - `rake db:create`
+ - `rake db:migrate`
+ - `rake db:seed`
+ - `yarn install`
 
-Things you may want to cover:
 
-* Ruby version
+ ## to start the project
+ `rails server`
 
-* System dependencies
+ ## to start tests
+ - in progress
 
-* Configuration
+ ## to deploy
+ - in progress
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ ## in the future
+ - automatic docker deployment
