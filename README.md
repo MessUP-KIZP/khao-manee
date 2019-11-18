@@ -1,3 +1,4 @@
+
 # do it good
 ## project setup (osx)
 
@@ -25,6 +26,15 @@
 
  ## to deploy
  - in progress
+
+ ## how to contribute
+
+ - we use [gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
+ - **never** commit directly to master
+ - each feature branch should have unique number (number is taken from our Trello features board)
+ - if your feature branch is ready, submit a PR (pull request)
+ - wait for approval
+ - merge to develop
 
  ## in the future
  - automatic docker deployment
