@@ -38,6 +38,10 @@ class HelloWorld extends React.Component {
           <button type="submit">Submit name</button>
         </form>
         <p>Greeting: { text }</p>
+        <form method="DELETE" action={ '/users/sign_out' }>
+          <input type="hidden" name="_method" value="delete" />
+          <button type="submit">Log out</button>
+        </form>
       </React.Fragment>
     );
   }
