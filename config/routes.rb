@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users
-  devise_scope :user do
-    get 'users/sign_out', to: 'users/sessions#destroy'
-  end
+  devise_for :users #, ActiveAdmin::Devise.config
+
+  ActiveAdmin.routes(self)
 
   namespace :api do
     namespace :v1 do

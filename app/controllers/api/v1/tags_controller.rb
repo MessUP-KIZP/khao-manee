@@ -1,13 +1,9 @@
 class Api::V1::TagsController < ApplicationController
   def index
-    render json: {
-      data: current_user.tags
-    }
+    render json: serialized_resource(current_user.tags)
   end
 
   def all
-    render json: {
-      data: Tag.all
-    }
+    render json: serialized_resource(Tag.all)
   end
 end
