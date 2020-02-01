@@ -17,7 +17,7 @@ export class MainPage extends React.Component {
     return (
       <>
         <Navbar />
-        <div className="main">
+        <div className="dig-main">
           MAIN
         </div>
         <Footer />
