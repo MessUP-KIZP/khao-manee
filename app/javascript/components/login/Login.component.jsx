@@ -4,6 +4,7 @@ import { api } from 'routes';
 
 export default class Login extends Component {
   render() {
+    console.log("RENDERIGN LOGIN COMP")
     return (
       <div className="login-page">
         <div className="login-area">

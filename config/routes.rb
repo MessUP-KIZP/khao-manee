@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   end
 
   root to: 'home#index'
+
   match '*path', to: 'home#index', via: :all
 end

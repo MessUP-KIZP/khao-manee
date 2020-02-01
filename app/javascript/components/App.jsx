@@ -17,7 +17,6 @@ class App extends React.Component {
         <ConnectedRouter history={ history }>
           <Switch>
             <Route path={ routes.hello} render={ () => <HelloWorld greeting="Friend" /> } />
-            <Route path={ api.users.session.new } render={ () => <Login /> } />
             <Route exact path={ routes.root } render={ () => "Home!" } />
           </Switch>
         </ConnectedRouter>
