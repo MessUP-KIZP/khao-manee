@@ -2,33 +2,26 @@ import React from "react"
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import actions from 'actions/helloWorld.actions';
+import Navbar from 'components/Navbar/Navbar.container';
+import Footer from 'components/Footer/Footer.component';
 
 const mapStateToProps = (state, props) => ({
-  ...state.helloWorld
 });
 
 const mapDispatchToProps = dispatch => ({
-  actions: bindActionCreators(actions, dispatch),
 });
 
 
-export class MainPAge extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = { text: '' }
-  }
-
+export class MainPage extends React.Component {
   render () {
-    const {} = this.props
-
     return (
-      <React.Fragment>
+      <>
         <Navbar />
-        <div class="main">
+        <div className="main">
           MAIN
         </div>
         <Footer />
-      </React.Fragment>
+      </>
     );
   }
 }

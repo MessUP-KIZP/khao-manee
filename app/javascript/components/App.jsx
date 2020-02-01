@@ -6,7 +6,7 @@ import routes, { api } from 'routes';
 import { Provider } from 'react-redux';
 import configureStore, { history } from 'configureStore';
 import HelloWorld from 'components/helloWorld';
-import Login from 'components/login';
+import MainPage from 'pages/main.page';
 
 const store = configureStore();
 
@@ -17,7 +17,7 @@ class App extends React.Component {
         <ConnectedRouter history={ history }>
           <Switch>
             <Route path={ routes.hello} render={ () => <HelloWorld greeting="Friend" /> } />
-            <Route exact path={ routes.root } render={ () => "Home!" } />
+            <Route exact path={ routes.root }><MainPage /> </Route>
           </Switch>
         </ConnectedRouter>
       </Provider>
