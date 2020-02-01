@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="294.41" height="75.574" viewBox="0 0 294.41 75.574">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="294.41" height="75.574" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Repeat_Grid_13" data-name="Repeat Grid 13" clip-path="url(#clip-path)">
+    <g transform="translate(-239.894 -462.213)">
+      <text id="doitgood." transform="translate(324.304 514.823)" fill="#161415" font-size="48.381" font-family="Gadugi"><tspan x="0" y="0">do</tspan><tspan y="0" fill="#970d19">it</tspan><tspan y="0">good</tspan><tspan y="0" fill="#970d19">.</tspan></text>
+      <g id="Group_243" data-name="Group 243">
+        <rect id="Rectangle_429" data-name="Rectangle 429" width="34.863" height="22.166" transform="translate(260.249 487.813)" fill="#970d19"/>
+        <path id="Path_514" data-name="Path 514" d="M272.33,513.207l-1.56,3.121h13.823l-1.56-3.121Z" fill="#970d19"/>
+        <path id="Path_515" data-name="Path 515" d="M277.681,462.213A37.787,37.787,0,1,0,315.468,500,37.787,37.787,0,0,0,277.681,462.213Zm20.659,49.38a1.613,1.613,0,0,1-1.614,1.614H286.641l2.006,4.013a1.615,1.615,0,0,1-1.443,2.336H268.158a1.615,1.615,0,0,1-1.443-2.336l2.006-4.013H258.635a1.614,1.614,0,0,1-1.614-1.614V486.2a1.615,1.615,0,0,1,1.614-1.614h38.091a1.614,1.614,0,0,1,1.614,1.614Z" fill="#970d19"/>
+      </g>
+    </g>
+  </g>
+</svg>

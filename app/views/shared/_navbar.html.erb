@@ -1,0 +1,14 @@
+<nav class="dig-navbar">
+  <div class="dig-navbar__logo">
+    <%= image_tag "logo.svg" %>
+  </div>
+  <div class="dig-navbar__buttons-area">
+    <div class="dig-navbar__buttons-area__buttons">
+      <%= link_to("Idea", about_path) %>
+      <%= link_to("Projekty", about_path) %>
+      <%= link_to("Organizacje", about_path) %>
+      <%= link_to("Zaloguj się", about_path) %>
+      <%= link_to("Dołącz do nas", about_path, class: "register") %>
+    </div>
+  </div>
+</nav>

@@ -10,6 +10,11 @@
   </head>
 
   <body class="do-it-good-body">
-    <%= yield %>
+    <%= render "shared/navbar" %>
+    <div class="dig-main">
+      <%= render "shared/sidebar" if @render_sidebar %>
+      <%= yield %>
+    </div>
+    <%= render "shared/footer" %>
   </body>
 </html>

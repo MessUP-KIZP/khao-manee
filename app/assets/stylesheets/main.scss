@@ -3,27 +3,24 @@ html {
 
   body {
     height: 100%;
+    display: flex;
+    flex-flow: column;
 
-    .dig-body {
+    nav {
+      height: 100px;
+    }
+
+    .dig-main {
+      height: 100%;
+      flex-grow: 1;
+      background-color: grey;
       display: flex;
-      flex-flow: column;
+      flex-flow: row;
+    }
 
-      nav {
-        height: 100px;
-        background-color: red;
-      }
-
-      .dig-main {
-        height: 100%;
-        flex-grow: 1;
-        background-color: grey;
-      }
-
-      footer {
-        height: 100px;
-        background-color: aqua;;
-      }
+    footer {
+      height: 100px;
+      background-color: aqua;;
     }
   }
-
 }
