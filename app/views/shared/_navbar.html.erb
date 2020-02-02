@@ -5,8 +5,8 @@
   <div class="dig-navbar__buttons-area">
     <div class="dig-navbar__buttons-area__buttons">
       <%= link_to("Idea", about_path) %>
-      <%= link_to("Projekty", about_path) %>
-      <%= link_to("Organizacje", about_path) %>
+      <%= link_to("Projekty", organisations_path) %>
+      <%= link_to("Organizacje", organisations_path) %>
       <% if current_user.nil? %>
       <%= link_to("Zaloguj się", new_user_session_path) %>
       <%= link_to("Dołącz do nas", new_user_registration_path, class: "register") %>

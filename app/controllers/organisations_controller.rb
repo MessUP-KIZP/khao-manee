@@ -1,7 +1,9 @@
 class OrganisationsController < ApplicationController
 
   def index
-    render json: Organisation.approved.all
+    @organisations = Organisation.all
+
+    render :index
   end
 
   private
