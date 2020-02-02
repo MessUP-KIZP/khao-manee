@@ -23,4 +23,16 @@ class Users::SessionsController < Devise::SessionsController
   # def configure_sign_in_params
   #   devise_parameter_sanitizer.permit(:sign_in, keys: [:attribute])
   # end
+  def respond_to_on_destroy
+    # We actually need to hardcode this as Rails default responder doesn't
+    # support returning empty response on GET request
+    respond_to do |format|
+      format.all { redirect_to root_path }
+      format.any(*navigational_formats) { redirect_to after_sign_out_path_for(resource_name) }
+    end
+  end
+
+  def after_sign_out_path_for(resource)
+    root_path
+  end
 end

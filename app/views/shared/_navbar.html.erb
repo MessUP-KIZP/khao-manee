@@ -17,8 +17,8 @@
             <ul>
               <li><%= link_to("Moje konto", user_path(current_user)) %></li>
               <li><%= link_to("Moje projekty", user_path(current_user)) %></li>
-              <li><%= link_to("Edytuj profil", user_path(current_user)) %></li>
-              <li><%= link_to("Wyloguj się", user_path(current_user)) %></li>
+              <li><%= link_to("Edytuj profil", edit_user_path(current_user)) %></li>
+              <li><%= link_to("Wyloguj się", destroy_user_session_path(current_user)) %></li>
             </ul>
           </div>
         </div>
