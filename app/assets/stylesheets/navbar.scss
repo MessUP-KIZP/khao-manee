@@ -8,6 +8,11 @@ nav {
     justify-content: space-between;
     align-items: center;
 
+    .dig-navbar__logo {
+      margin-left: 10px;
+      img { height: 50px; }
+    }
+
     .dig-navbar__buttons-area {
       margin-right: 5px;
 
@@ -15,13 +20,13 @@ nav {
         display: flex;
         align-items: flex-end;
 
+
         a {
-          font-size: 22px;
-          font-weight: 300;
-          font-stretch: normal;
-          font-style: normal;
+          font-family: $font-text-regular;
+          font-size: 18px;
+          font-weight: 100;
           line-height: 1.2;
-          letter-spacing: -1.8px;
+          letter-spacing: 1px;
           color: rgba(34, 32, 37, 0.99);
           margin: 0px 14px 0px 14px;
           text-decoration: none;
@@ -31,9 +36,9 @@ nav {
           justify-content: center;
 
           &.register {
-            background-color: $main-red;
+            background-color: $main-color;
             color: #fff;
-            border-radius: 20px;
+            border-radius: 30px;
             width: 150px;
           }
         }

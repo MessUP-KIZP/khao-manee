@@ -1,1 +1,11 @@
-$main-red: #860303;
+// colors
+$main-color: #860303;
+$border-color: #707070;
+
+// fonts
+@font-face {
+  font-family: 'Lato-Regular';
+  src: font-url("/assets/Lato-Regular.ttf");
+}
+
+$font-text-regular: 'Lato-Regular'

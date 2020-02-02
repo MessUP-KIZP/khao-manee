@@ -1,0 +1,55 @@
+@import 'globals.scss';
+
+.dig-main {
+  .login-page {
+    margin-top: 50px;
+    height: 600px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    border-radius: 28px;
+    box-shadow: 8px -5px 12px 0 rgba(0, 0, 0, 0.34);
+    background-color: white;
+
+    h2 {
+      font-size: 50px;
+    }
+    form {
+      display: flex;
+      flex-flow: column;
+      margin: 40px 40px 40px 40px;
+      font-size: 20px;
+      width: 400px;
+
+
+      input {
+        margin: 10px 10px 10px 0;
+        font-size: 20px;
+        height: 28px;
+        width: 100%;
+        border-radius: 5px;
+        -webkit-backdrop-filter: blur(30px);
+        backdrop-filter: blur(30px);
+        border: solid 1px $border-color;
+      }
+      label {
+        margin: 10px 10px 10px 0;
+      }
+
+      input[type=checkbox] {
+        width: 50px;
+      }
+
+      .actions {
+        input {
+          height: 48px;
+          color: white;
+          border-radius: 5px;
+          padding: 0;
+          width: 100%;
+          background-color: $main-color;
+        }
+      }
+    }
+  }
+}

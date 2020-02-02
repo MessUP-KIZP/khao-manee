@@ -1,3 +1,5 @@
+@import 'globals.scss';
+
 html {
   height: 100%;
 
@@ -5,6 +7,7 @@ html {
     height: 100%;
     display: flex;
     flex-flow: column;
+    font-family: $font-text-regular;
 
     nav {
       height: 100px;
@@ -13,14 +16,28 @@ html {
     .dig-main {
       height: 100%;
       flex-grow: 1;
-      background-color: grey;
       display: flex;
       flex-flow: row;
+      justify-content: center;
     }
 
     footer {
       height: 100px;
       background-color: aqua;;
+    }
+
+    .background-image {
+      position: absolute;
+      z-index: -1;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+
+      &.blurred {
+        background-color: grey;
+        opacity: 0.6;
+      }
     }
   }
 }
