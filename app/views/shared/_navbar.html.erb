@@ -12,13 +12,13 @@
       <%= link_to("Dołącz do nas", new_user_registration_path, class: "register") %>
       <% else %>
         <div class="dig-dropdown">
-          <button class="dropdown-button">Witaj, <%= current_user.first_name %></button>
+          <a href="#" class="dropdown-button">Witaj, <%= current_user.first_name %></a>
           <div class="dropdown-content">
             <ul>
-              <li><%= link_to("Moje konto", user_path(@current_user)) %></li>
-              <li><%= link_to("Moje projekty", user_path(@current_user)) %></li>
-              <li><%= link_to("Edytuj profil", user_path(@current_user)) %></li>
-              <li><%= link_to("Wyloguj się", user_path(@current_user)) %></li>
+              <li><%= link_to("Moje konto", user_path(current_user)) %></li>
+              <li><%= link_to("Moje projekty", user_path(current_user)) %></li>
+              <li><%= link_to("Edytuj profil", user_path(current_user)) %></li>
+              <li><%= link_to("Wyloguj się", user_path(current_user)) %></li>
             </ul>
           </div>
         </div>

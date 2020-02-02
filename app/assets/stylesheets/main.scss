@@ -4,10 +4,12 @@ html {
   height: 100%;
 
   body {
+    margin: 0;
     height: 100%;
     display: flex;
     flex-flow: column;
     font-family: $font-text-regular;
+    overflow: hidden;
 
     nav {
       height: 100px;
@@ -32,7 +34,7 @@ html {
       top: 0px;
       width: 100%;
       height: 100%;
-      overflow: hidden;
+
 
       &.blurred {
         background-color: grey;
