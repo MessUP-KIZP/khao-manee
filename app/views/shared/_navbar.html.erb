@@ -7,8 +7,22 @@
       <%= link_to("Idea", about_path) %>
       <%= link_to("Projekty", about_path) %>
       <%= link_to("Organizacje", about_path) %>
+      <% if current_user.nil? %>
       <%= link_to("Zaloguj się", new_user_session_path) %>
       <%= link_to("Dołącz do nas", new_user_registration_path, class: "register") %>
+      <% else %>
+        <div class="dig-dropdown">
+          <button class="dropdown-button">Witaj, <%= current_user.first_name %></button>
+          <div class="dropdown-content">
+            <ul>
+              <li><%= link_to("Moje konto", user_path(@current_user)) %></li>
+              <li><%= link_to("Moje projekty", user_path(@current_user)) %></li>
+              <li><%= link_to("Edytuj profil", user_path(@current_user)) %></li>
+              <li><%= link_to("Wyloguj się", user_path(@current_user)) %></li>
+            </ul>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
 </nav>
