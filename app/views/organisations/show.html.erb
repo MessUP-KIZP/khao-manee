@@ -1,0 +1,20 @@
+<div class="dig-resource-item">
+  <div class="dig-resource-item-content">
+    <div class="dig-resource-item-picture">
+      <% if @organisation.avatar? %>
+        <%= image_tag(@organisation.avatar_url) %>
+      <% else %>
+        <%= image_tag('blank_profile_organisation.svg') %>
+      <% end %>
+    </div>
+    <div class="resource-item-name">
+      <h2><%= @organisation.name %></h2>
+    </div>
+    <div class="dig-resource-item-description">
+      <%= @organisation.description %>
+    </div>
+  </div>
+  <div class="dig-resource-item-footer">
+    <%= button_to("Dołącz", organisation_path(@organisation)) %>
+  </div>
+</div>

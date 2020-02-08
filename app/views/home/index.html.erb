@@ -10,7 +10,7 @@
       <p class="dig-section-content">
         Czy chciałbyś aby Twoja wiedza programistyczna pomogła organizacjom charytatywnym, a może chcesz spróbować swoich sił w pierwszym dużym projekcie w celu poszerzenia swojego portfolio? Jesteśmy stroną zrzeszająca programistów oraz organizacje które potrzebują informatycznej pomocy. Nie ważne na jakim poziomie jesteś, rozwiń swoje umiejętności, albo pomagaj w pełnym formacie od razu firmom które tego najbardziej potrzebują.
       </p>
-      <%= button_to(new_user_registration_path) %>
+      <%= button_to("Dołącz!", new_user_registration_path, method: :get) %>
     </section>
   </div>
 
@@ -25,7 +25,7 @@
       <p class="dig-section-content">
         Chcesz pomagać innym, ale aby zrealizować swój cel potrzebujesz informatyków na których Cię nie stać? Skorzystaj z pomocy osób z dobrym sercem. Zrzeszamy programistów z różnych dziedzin skorych do pomocy. Dołącz do nas i zgłoś projekt swojej organizacji, po zapoznaniu się z nim chętni programiści odezwą się do Ciebie, a Ty będziesz mógł dalej pomagać innym!
       </p>
-      <%= button_to(contact_path) %>
+      <%= button_to("Zgłoś projekt!", contact_path, method: :get) %>
     </section>
   </div>
 

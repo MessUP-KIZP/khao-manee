@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
+  before_action :check_permission, only: [:edit, :update]
 
   def show
-    render json: current_user
   end
 
   def edit
@@ -16,6 +16,10 @@ class UsersController < ApplicationController
   end
 
   private
+
+  def check_permission
+    redirect_to(root_path) unless current_user.id == params[:id]
+  end
 
   def user_params
     params.require(:user).permit(:first_name, :last_name, :phone_number)
