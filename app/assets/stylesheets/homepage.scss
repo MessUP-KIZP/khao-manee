@@ -18,6 +18,12 @@
       .background-image {
         top: 392px;
       }
+
+      section {
+        border-top-right-radius: 30%;
+        border-bottom-right-radius: 30%;
+        border-bottom-left-radius: 0;
+      }
     }
 
     .background-image {
@@ -37,11 +43,16 @@
       flex-flow: column;
       align-items: center;
       justify-content: center;
+      text-align: justify;
+      border-bottom-left-radius: 30%;
 
       h1 { font-size: 42px; }
       p {
         text-justify: distribute;
         font-size: 22px
+      }
+      .dig-section-content {
+        width: 75%;
       }
     }
 

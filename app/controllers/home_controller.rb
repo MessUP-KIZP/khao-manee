@@ -7,4 +7,7 @@ class HomeController < ApplicationController
 
   def cookies
   end
+
+  def contact
+  end
 end

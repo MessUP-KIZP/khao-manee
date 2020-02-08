@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 
   get 'about', to: 'home#about'
   get 'cookies', to: 'home#cookies'
+  get 'contact', to: 'home#contact'
   root to: 'home#index'
 
   match '*path', to: 'home#index', via: :all
