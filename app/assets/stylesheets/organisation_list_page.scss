@@ -1,0 +1,57 @@
+.dig-organisations-list {
+  display: flex;
+  flex-flow: row;
+
+  .dig-organisation-item {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 417px;
+    height: 553px;
+    border-radius: 22px;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0px 5px 20px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 5px 20px -5px rgba(0,0,0,0.75);
+    box-shadow: 0px 5px 20px -5px rgba(0,0,0,0.75);
+    margin: 10px 10px 10px 10px;
+
+    .dig-organisation-item-content {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      width: 360px;
+
+      .dig-organisation-item-picture {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 212px;
+        height: 212px;
+      }
+
+      .dig-organisation-item-name {
+        width: 100%;
+        text-align: center;
+      }
+
+      .dig-organisation-item-description {
+        text-align: center;
+        text-justify: distribute-all-lines;
+        overflow: auto;
+        flex-grow: 1;
+        flex-basis: content;
+        padding: 10px 0 10px 0;
+      }
+    }
+
+    .dig-organisation-item-footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 10px;
+      margin-bottom: 20px;
+    }
+  }
+}

@@ -1,5 +1,5 @@
 class Organisation < ApplicationRecord
-  mount_uploader :avatar, OrganisationAvatarUploader
+  mount_uploader :avatar, ::OrganisationAvatarUploader
   has_many :organisations_tags
   has_many :organisations_users
 
