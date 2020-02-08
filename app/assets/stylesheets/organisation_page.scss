@@ -1,0 +1,54 @@
+@import 'globals.scss';
+
+.dig-organisation {
+  overflow: auto;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+
+  .dig-org-content {
+    background-color: white;
+    width: 80%;
+    border-radius: 10px;
+
+    .dig-org-picture {
+      img {
+        height: 225px;
+        width: 225px;
+      }
+    }
+
+    .dig-org-row {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      .dig-org-tags {
+        width: 500px;
+        display: flex;
+        flex-flow: wrap;
+
+        .dig-org-tag {
+          background-color: $tag-color;
+          color: white;
+          border-radius: 50px;
+
+          font-size: 16.7px;
+          font-weight: 300;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.2;
+          letter-spacing: normal;
+          text-align: left;
+          padding: 5px 10px 5px 10px;
+          margin: 10px 10px 10px 10px;
+        }
+      }
+
+      .dig-org-description {
+        width: 500px;
+      }
+    }
+  }
+}

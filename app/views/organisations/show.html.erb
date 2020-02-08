@@ -1,20 +1,43 @@
-<div class="dig-resource-item">
-  <div class="dig-resource-item-content">
-    <div class="dig-resource-item-picture">
-      <% if @organisation.avatar? %>
-        <%= image_tag(@organisation.avatar_url) %>
-      <% else %>
-        <%= image_tag('blank_profile_organisation.svg') %>
-      <% end %>
+<div class="background-image blurred"><%= image_tag("main_1.png")%></div>
+<div class="dig-organisation">
+  <div class="dig-org-content">
+    <div class="dig-org-row">
+      <div class="dig-org-picture">
+        <% if @organisation.avatar? %>
+          <%= image_tag(@organisation.avatar_url) %>
+        <% else %>
+          <%= image_tag('blank_profile_organisation.svg') %>
+        <% end %>
+      </div>
+      <div class="dig-org-name">
+        <h2><%= @organisation.name %></h2>
+      </div>
+      <div class="dig-org-button">
+        <%= button_to("Dołącz", organisation_path(@organisation)) %>
+      </div>
     </div>
-    <div class="resource-item-name">
-      <h2><%= @organisation.name %></h2>
+
+    <div class="dig-org-row">
+      <h3>Technologie:</h3>
+      <div class="dig-org-tags">
+        <% @organisation.tags.each do |tag| %>
+          <div class="dig-org-tag"><%= tag.name %></div>
+        <% end %>
+      </div>
     </div>
-    <div class="dig-resource-item-description">
-      <%= @organisation.description %>
+
+    <div class="dig-org-row">
+      <h3>O firmie</h3>
+      <div class="dig-org-description">
+        <%= @organisation.description %>
+      </div>
     </div>
-  </div>
-  <div class="dig-resource-item-footer">
-    <%= button_to("Dołącz", organisation_path(@organisation)) %>
+
+    <div class="dig-org-row">
+      <h3>Dodane projekty</h3>
+      <div class="dig-org-projects">
+        <%= @organisation.projects.pluck(:name) %>
+      </div>
+    </div>
   </div>
 </div>

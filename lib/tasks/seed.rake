@@ -33,5 +33,9 @@ namespace :seed do
       puts name
       Tag.create!(name: name, tag_type: :skill)
     end
+
+    Organisation.all.each do |org|
+      org.tags << Tag.all.sample(6)
+    end
   end
 end
