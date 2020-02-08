@@ -6,6 +6,10 @@ class OrganisationsController < ApplicationController
     render :index
   end
 
+  def show
+    @organisation = Organisation.find(params[:id])
+  end
+
   private
 
     def organisation_params

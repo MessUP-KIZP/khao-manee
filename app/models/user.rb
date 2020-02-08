@@ -14,4 +14,5 @@ class User < ApplicationRecord
   has_many :projects, through: :projects_users
   has_many :tags, through: :tags_users
   has_many :roles, through: :roles_users
+  has_one :biography
 end

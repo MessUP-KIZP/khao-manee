@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="dig-list-header">
+</div>
+
+<div class="dig-resource-list">
+  <% @users.each do |user| %>
+    <div class="dig-resource-item">
+      <div class="dig-resource-item-content">
+        <div class="dig-resource-item-picture">
+          <% if user.avatar? %>
+            <%= image_tag(user.avatar_url) %>
+          <% else %>
+            <%= image_tag('blank_profile_user.svg') %>
+          <% end %>
+          <div class="dig-resource-item-card">
+            <h3><%= user.first_name %> <%= user.last_name%></h3>
+          </div>
+        </div>
+        <div class="dig-resource-item-description">
+          <%= user.biographies.take %>
+        </div>
+      </div>
+      <div class="dig-resource-item-footer">
+        <%= button_to("Wywietl profil", user_path(user)) %>
+      </div>
+    </div>
+  <% end %>
+</div>
