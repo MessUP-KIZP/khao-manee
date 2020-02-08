@@ -8,10 +8,29 @@
   .dig-contact-us-content {
     display: flex;
     flex-flow: column;
+    border-radius: 10px;
+    background-color: white;
+
+    .dig-contact-us-title {
+      h1 { text-align: center; }
+    }
 
     form {
       display: flex;
       flex-flow: column;
+
+      > * {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        margin: 10px;
+      }
+      label { vertical-align: top; }
+      textarea { height: auto; }
+
+      :last-child {
+        margin-bottom: 20px;
+      }
     }
   }
 }
